@@ -13,6 +13,12 @@ function calculateInvestment() {
   //calculate total
   var total = [investAmt * (interestRate / 100) * investYr];
 
+  //round to two decimal places
+  total = Math.round(total * 100) / 100;
+
+  // always have two decimal point
+  total = total.toFixed(2);
+
   //display the values added the HTML mark tag inside quotes to get it to work
   document.getElementById("p").innerHTML = "If you deposit <mark>" + investAmt + "</mark>,";
   document.getElementById("r").innerHTML = "at a rate of <mark>" + interestRate + "</mark>.";
