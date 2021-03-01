@@ -5,7 +5,7 @@ function calculateInvestment() {
   var interestRate = document.getElementById("intrate").value;
 
   //validate input
-  if (investAmt === "" || investYr == 0) {
+  if (investAmt === "" || investYr == 0 || investAmt <= 1) {
     alert("Please enter values");
     return;
   }
