@@ -12,18 +12,11 @@ function calculateInvestment() {
 
   //calculate total
   var total = [investAmt * (interestRate / 100) * investYr];
-  var grandTotal = parseFloat(total) + parseFloat(investAmt);
-
-  //round to two decimal places
-  grandTotal = Math.round(grandTotal * 100) / 100;
-
-  // always have two decimal point
-  grandTotal = grandTotal.toFixed(2);
 
   //display the values added the HTML mark tag inside quotes to get it to work
   document.getElementById("p").innerHTML = "If you deposit <mark>" + investAmt + "</mark>,";
   document.getElementById("r").innerHTML = "at a rate of <mark>" + interestRate + "</mark>.";
-  document.getElementById("yield").innerHTML = "You will receive an amount of <mark>" + grandTotal + "</mark>,";
+  document.getElementById("yield").innerHTML = "You will receive an amount of <mark>" + total + "</mark>,";
   document.getElementById("y").innerHTML = "in the year <mark>" + (+d.getFullYear() + +investYr) + "</mark>";
 }
 
